@@ -1,20 +1,27 @@
-import express from 'express';
-import dotenv from 'dotenv';
-import pool from './db';
+import express from "express";
 
-dotenv.config();
+import pool from "./db";
+
 const app = express();
-const PORT = process.env.PORT || 5000;
 
-app.get('/', async (req, res) => {
-  try {
-    const result = await pool.query('SELECT NOW()');
-    res.json(result.rows);
-  } catch (err) {
-    res.status(500).json({ error: 'Database error' });
-  }
+app.use(express.json());
+
+// API endpoint to receive form data
+app.post("/api/submit", async (req, res) => {
+	const { firstName, lastName, email, password } = req.body;
+	try {
+		await pool.query(
+		"INSERT INTO users (first_name, last_name, email, password) VALUES ($1, $2, $3, $4)",
+		[firstName, lastName, email, password]
+		);
+		res.status(200).send("Data inserted successfully");
+	} catch (error) {
+		console.error("Error inserting data:", error);
+		res.status(500).send("Error inserting data");
+	}
 });
 
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+// Start server
+app.listen(5000, () => {
+  	console.log("Server running on port 5000");
 });
