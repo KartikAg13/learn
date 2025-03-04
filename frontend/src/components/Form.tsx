@@ -44,15 +44,14 @@ const Form = (): JSX.Element => {
 		>
 			{/* First Name Field */}
 			<div className="mb-4">
-			<label
-				className="block text-gray-300 text-sm font-bold mb-2"
-				htmlFor="firstName"
-			>
-				First name
-			</label>
-			<div className="relative">
+			<div className="relative shadow appearance-none border rounded w-full py-2 px-3 text-white bg-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+				<label
+					className="block text-gray-300 text-sm font-bold mb-2"
+					htmlFor="firstName"
+				>
+					First name
+				</label>
 				<input
-				className="shadow appearance-none border rounded w-full py-2 px-3 text-white bg-gray-700 leading-tight focus:outline-none focus:shadow-outline"
 				id="firstName"
 				type="text"
 				placeholder="First name"
@@ -82,15 +81,14 @@ const Form = (): JSX.Element => {
 
 			{/* Last Name Field */}
 			<div className="mb-4">
-			<label
-				className="block text-gray-300 text-sm font-bold mb-2"
-				htmlFor="lastName"
-			>
-				Last name
-			</label>
-			<div className="relative">
+			<div className="relative shadow appearance-none border rounded w-full py-2 px-3 text-white bg-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+				<label
+					className="block text-gray-300 text-sm font-bold mb-2"
+					htmlFor="lastName"
+				>
+					Last name
+				</label>
 				<input
-				className="shadow appearance-none border rounded w-full py-2 px-3 text-white bg-gray-700 leading-tight focus:outline-none focus:shadow-outline"
 				id="lastName"
 				type="text"
 				placeholder="Last name"
@@ -120,15 +118,14 @@ const Form = (): JSX.Element => {
 
 			{/* Email Field */}
 			<div className="mb-4">
-			<label
-				className="block text-gray-300 text-sm font-bold mb-2"
-				htmlFor="email"
-			>
-				Email
-			</label>
-			<div className="relative">
+			<div className="relative shadow appearance-none border rounded w-full py-2 px-3 text-white bg-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+				<label
+					className="block text-gray-300 text-sm font-bold mb-2"
+					htmlFor="email"
+				>
+					Email
+				</label>
 				<input
-				className="shadow appearance-none border rounded w-full py-2 px-3 text-white bg-gray-700 leading-tight focus:outline-none focus:shadow-outline"
 				id="email"
 				type="email"
 				placeholder="Email"
@@ -158,15 +155,14 @@ const Form = (): JSX.Element => {
 
 			{/* Password Field */}
 			<div className="mb-6">
-			<label
-				className="block text-gray-300 text-sm font-bold mb-2"
-				htmlFor="password"
-			>
-				Password
-			</label>
-			<div className="relative">
+			<div className="relative shadow appearance-none border-b-2 border-blue-500 rounded w-full py-2 px-3 text-white bg-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+				<label
+					className="block text-gray-300 text-sm font-bold mb-2"
+					htmlFor="password"
+				>
+					Password
+				</label>
 				<input
-				className="shadow appearance-none border-b-2 border-blue-500 rounded w-full py-2 px-3 text-white bg-gray-700 leading-tight focus:outline-none focus:shadow-outline"
 				id="password"
 				type="password"
 				placeholder="Password"
